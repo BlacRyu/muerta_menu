@@ -1,8 +1,8 @@
 {
 	"camera" : 
 	{
-		"center" : "23.97990 3.40798 -138.59723",
-		"eye" : "23.76484 3.21415 -139.55440",
+		"center" : "27.09418 6.10662 -125.19404",
+		"eye" : "23.78745 3.95336 -139.56429",
 		"up" : "0.00000 1.00000 0.00000"
 	},
 	"general" : 
@@ -87,6 +87,48 @@
 				"script" : "'use strict';\n\nvar initialPos;\nvar orbitPos;\nvar smoothness = 0.1;\nvar panAmount = new Vec2(-1.0, 0.5);\nvar rightVector;\nvar movementScale = 1.0;\n\nexport function init() {\n\tlet cameraTransforms = thisScene.getCameraTransforms();\n\tinitialPos = thisScene.getLayer(\"cameraEye\").origin;\n\torbitPos = thisScene.getLayer(\"cameraOrbit\").origin;\n\trightVector = initialPos.subtract(orbitPos).cross(cameraTransforms.up).normalize();\n\tthisScene.setCameraTransforms(cameraTransforms);\n}\n\nexport function update() {\n\tlet cameraTransforms = thisScene.getCameraTransforms();\n\t// Normalized cursor distance from center of screen\n\tlet screenPosition = input.cursorScreenPosition.divide(engine.screenResolution).subtract(0.5, 0.5);\n\t// Where the camera wants to go\n\tlet targetPos = initialPos.add(rightVector.multiply(panAmount.x * screenPosition.x * movementScale));\n\ttargetPos = targetPos.add(cameraTransforms.up.multiply(panAmount.y * screenPosition.y * movementScale));\n\t// Vector from current position to the target position\n\tlet toTarget = targetPos.subtract(cameraTransforms.eye);\n\tif (smoothness > 0.0001) {\n\t\tcameraTransforms.eye = cameraTransforms.eye.add(toTarget.multiply(1.0 - Math.pow(0.5, engine.frametime / smoothness)));\n\t}\n\telse {\n\t\tcameraTransforms.eye = targetPos;\n\t}\n\tcameraTransforms.center = orbitPos;\n\tthisScene.setCameraTransforms(cameraTransforms)\n}\n\n/**\n * @param {Object} changedUserProperties - only includes user properties that were recently changed!\n */\nexport function applyUserProperties(changedUserProperties) {\n\tif (changedUserProperties.cameramovementscale !== undefined) {\n\t\tmovementScale = changedUserProperties.cameramovementscale;\n\t}\n\tif (changedUserProperties.cameramovementsmoothness !== undefined) {\n\t\tsmoothness = changedUserProperties.cameramovementsmoothness;\n\t}\n}\n",
 				"value" : true
 			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 88,
+			"image" : "models/util/solidlayer_depthtest.json",
+			"ledsource" : false,
+			"locktransforms" : true,
+			"name" : "cameraOrbit",
+			"origin" : "27.09418 6.10662 -125.19404",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.01000 0.01000 0.01000",
+			"size" : "4.00000 4.00000",
+			"solid" : true,
+			"visible" : false
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 135,
+			"image" : "models/util/solidlayer_depthtest.json",
+			"ledsource" : false,
+			"locktransforms" : true,
+			"name" : "cameraEye",
+			"origin" : "23.78745 3.95336 -139.56429",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.01000 0.01000 0.01000",
+			"size" : "4.00000 4.00000",
+			"solid" : true,
+			"visible" : false
 		},
 		{
 			"angles" : "0.00000 0.00000 0.00000",
@@ -215,48 +257,6 @@
 				"script" : "'use strict';\n\n/**\n * @param {Boolean} value - for property 'visible'\n * @return {Boolean} - update current property value\n */\nexport function update(value) {\n\treturn (shared.hoverCandle1 == true || shared.hoverCandle2 == true || shared.hoverCandle3 == true);\n}\n",
 				"value" : false
 			}
-		},
-		{
-			"alignment" : "center",
-			"alpha" : 1.0,
-			"angles" : "0.00000 0.00000 0.00000",
-			"brightness" : 1.0,
-			"color" : "1.00000 1.00000 1.00000",
-			"colorBlendMode" : 0,
-			"copybackground" : true,
-			"id" : 88,
-			"image" : "models/util/solidlayer_depthtest.json",
-			"ledsource" : false,
-			"locktransforms" : true,
-			"name" : "cameraOrbit",
-			"origin" : "27.09418 6.10662 -125.19404",
-			"parallaxDepth" : "1.00000 1.00000",
-			"perspective" : false,
-			"scale" : "0.01000 0.01000 0.01000",
-			"size" : "4.00000 4.00000",
-			"solid" : true,
-			"visible" : false
-		},
-		{
-			"alignment" : "center",
-			"alpha" : 1.0,
-			"angles" : "0.00000 0.00000 0.00000",
-			"brightness" : 1.0,
-			"color" : "1.00000 1.00000 1.00000",
-			"colorBlendMode" : 0,
-			"copybackground" : true,
-			"id" : 135,
-			"image" : "models/util/solidlayer_depthtest.json",
-			"ledsource" : false,
-			"locktransforms" : true,
-			"name" : "cameraEye",
-			"origin" : "23.78745 3.95336 -139.56429",
-			"parallaxDepth" : "1.00000 1.00000",
-			"perspective" : false,
-			"scale" : "0.01000 0.01000 0.01000",
-			"size" : "4.00000 4.00000",
-			"solid" : true,
-			"visible" : false
 		},
 		{
 			"angles" : "0.00000 0.00000 0.00000",
