@@ -13,12 +13,14 @@
 				"Color" : "1 1 1",
 				"Light" : 1,
 				"Metal" : 0,
-				"Rough" : 1
+				"Rough" : 1,
+				"Sway Speed" : 1,
+				"Sway Strength" : 0.015
 			},
 			"cullmode" : "normal",
 			"depthtest" : "enabled",
 			"depthwrite" : "enabled",
-			"shader" : "generic2",
+			"shader" : "generic2_foliage",
 			"textures" : 
 			[
 				"models/_shrine/muerta_ofrenda_lightbake_flowers_1_color_png_ec88c563",

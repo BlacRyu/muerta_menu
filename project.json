@@ -8,12 +8,12 @@
 			{
 				"fraction" : true,
 				"index" : 0,
-				"max" : 2,
+				"max" : 10,
 				"min" : 0,
 				"order" : 100,
 				"precision" : 2,
 				"step" : 0.1,
-				"text" : "Camera movement distance",
+				"text" : "Camera movement amount",
 				"type" : "slider",
 				"value" : 1
 			},
@@ -39,6 +39,9 @@
 			}
 		}
 	},
+	"preview" : "preview.gif",
+	"snapshotformat" : 0,
+	"snapshotoverlay" : "",
 	"title" : "Muerta Menu",
 	"type" : "scene",
 	"version" : 0
