@@ -1,0 +1,17 @@
+{
+	"passes" : 
+	[
+		{
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"shader" : "generic2",
+			"textures" : 
+			[
+				"models/_box/muerta_ofrenda_lightbake_box_color_png_c2967a83",
+				"muerta_ofrenda_box_b_lightbake_normal_png_bf660ba9"
+			]
+		}
+	]
+}

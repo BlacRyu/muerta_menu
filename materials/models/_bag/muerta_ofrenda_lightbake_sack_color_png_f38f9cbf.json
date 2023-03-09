@@ -1,0 +1,27 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "normal",
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"constantshadervalues" : 
+			{
+				"Light" : 0.5,
+				"Rough" : 0.95
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
+			"shader" : "generic2",
+			"textures" : 
+			[
+				"models/_bag/muerta_ofrenda_lightbake_sack_color_png_f38f9cbf",
+				"muerta_ofrenda_sack_a_normal_png_641e1020"
+			]
+		}
+	]
+}

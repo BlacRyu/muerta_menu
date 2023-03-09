@@ -1,0 +1,26 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "normal",
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"constantshadervalues" : 
+			{
+				"Rough" : 1
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
+			"shader" : "generic2",
+			"textures" : 
+			[
+				"models/_shrine/muerta_ofrenda_lightbake_rockshrine_2_color_png_247b35e1",
+				"muerta_ofrenda_lightbake_rockshrine_2_normal_png_b62a8403"
+			]
+		}
+	]
+}

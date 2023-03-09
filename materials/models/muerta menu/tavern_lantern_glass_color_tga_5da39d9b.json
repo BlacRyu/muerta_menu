@@ -1,0 +1,13 @@
+{
+	"passes" : 
+	[
+		{
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"shader" : "generic2",
+			"textures" : [ "models/muerta menu/tavern_lantern_glass_color_tga_5da39d9b" ]
+		}
+	]
+}

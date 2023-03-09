@@ -1,0 +1,45 @@
+{
+	"file" : "scene.json",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"cameramovementscale" : 
+			{
+				"fraction" : true,
+				"index" : 0,
+				"max" : 2,
+				"min" : 0,
+				"order" : 100,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "Camera movement distance",
+				"type" : "slider",
+				"value" : 1
+			},
+			"cameramovementsmoothness" : 
+			{
+				"fraction" : true,
+				"index" : 1,
+				"max" : 1,
+				"min" : 0,
+				"order" : 101,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "Camera movement smoothness",
+				"type" : "slider",
+				"value" : 0.15
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			}
+		}
+	},
+	"title" : "Muerta Menu",
+	"type" : "scene",
+	"version" : 0
+}

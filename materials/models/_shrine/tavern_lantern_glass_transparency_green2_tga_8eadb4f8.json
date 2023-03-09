@@ -1,0 +1,31 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "translucent",
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"constantshadervalues" : 
+			{
+				"Alpha" : 1,
+				"Brigtness" : 1,
+				"Color" : "1 1 1",
+				"Light" : 1,
+				"Metal" : 1,
+				"Rough" : 0.1
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
+			"shader" : "generic2",
+			"textures" : 
+			[
+				"models/_shrine/tavern_lantern_glass_transparency_green2_tga_8eadb4f8",
+				"tavern_lantern_glass_normal_tga_500671f2"
+			]
+		}
+	]
+}

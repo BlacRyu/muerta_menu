@@ -1,0 +1,17 @@
+{
+	"passes" : 
+	[
+		{
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"shader" : "generic2",
+			"textures" : 
+			[
+				"models/_shrine/muerta_ofrenda_lightbake_offerings_color_png_54e6d6ec",
+				"muerta_ofrenda_lightbake_offerings_normal_png_281ba74c"
+			]
+		}
+	]
+}

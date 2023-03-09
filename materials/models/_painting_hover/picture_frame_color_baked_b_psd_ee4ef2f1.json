@@ -1,0 +1,26 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "translucent",
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"constantshadervalues" : 
+			{
+				"Alpha" : 
+				{
+					"script" : "'use strict';\n\nfunction clamp(value, min = 0.0, max = 1.0) {\n\treturn Math.min(Math.max(value, min), max);\n}\n\nlet transitionTime = 0.4;\n\n\n/**\n * @param {Number} value - for property 'Alpha'\n * @return {Number} - update current property value\n */\nexport function update(value) {\n\tif (shared.hoverPainting) {\n\t\tvalue += engine.frametime * 1.0 / transitionTime;\n\t}\n\telse {\n\t\tvalue -= engine.frametime * 1.0 / transitionTime;\n\t}\n\treturn clamp(value);\n}\n",
+					"value" : 0
+				}
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
+			"shader" : "generic2",
+			"textures" : [ "models/_painting_hover/picture_frame_color_baked_b" ]
+		}
+	]
+}

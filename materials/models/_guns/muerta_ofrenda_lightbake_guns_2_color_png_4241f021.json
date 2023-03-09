@@ -1,0 +1,28 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "normal",
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"constantshadervalues" : 
+			{
+				"Light" : 0,
+				"Metal" : 1,
+				"Rough" : 1
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
+			"shader" : "generic2",
+			"textures" : 
+			[
+				"models/_guns/muerta_ofrenda_lightbake_guns_2_color_png_4241f021",
+				"gun_normal_png_64ad26e5"
+			]
+		}
+	]
+}

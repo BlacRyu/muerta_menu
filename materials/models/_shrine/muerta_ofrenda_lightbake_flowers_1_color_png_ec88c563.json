@@ -1,0 +1,29 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "normal",
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"constantshadervalues" : 
+			{
+				"Color" : "1 1 1",
+				"Light" : 1,
+				"Metal" : 0,
+				"Rough" : 1
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
+			"shader" : "generic2",
+			"textures" : 
+			[
+				"models/_shrine/muerta_ofrenda_lightbake_flowers_1_color_png_ec88c563",
+				"muerta_ofrenda_lightbake_flowers_1_vmat_g_tnormal_5a28bd86"
+			]
+		}
+	]
+}

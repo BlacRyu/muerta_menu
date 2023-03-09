@@ -1,0 +1,120 @@
+{
+	"controlpoint" : 
+	[
+		{
+			"flags" : 0,
+			"id" : 0,
+			"offset" : "0 10 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 1,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 2,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 3,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 4,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 5,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 6,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 7,
+			"offset" : "0 0 0"
+		}
+	],
+	"emitter" : 
+	[
+		{
+			"distancemax" : 5,
+			"distancemin" : 0,
+			"id" : 6,
+			"name" : "sphererandom",
+			"rate" : 6
+		}
+	],
+	"initializer" : 
+	[
+		{
+			"id" : 2,
+			"max" : 1.25,
+			"min" : 0.5,
+			"name" : "lifetimerandom"
+		},
+		{
+			"id" : 3,
+			"max" : 8,
+			"min" : 4,
+			"name" : "sizerandom"
+		},
+		{
+			"exponent" : 200,
+			"id" : 4,
+			"max" : "0 150 0",
+			"min" : "0 10 0",
+			"name" : "velocityrandom"
+		},
+		{
+			"id" : 5,
+			"max" : "255 211 0",
+			"min" : "255 54 0",
+			"name" : "colorrandom"
+		}
+	],
+	"material" : "materials/particle/halo_2.json",
+	"maxcount" : 500,
+	"operator" : 
+	[
+		{
+			"gravity" : "0 50 0",
+			"id" : 7,
+			"name" : "movement"
+		},
+		{
+			"id" : 8,
+			"name" : "sizechange",
+			"starttime" : 0.5
+		},
+		{
+			"id" : 9,
+			"name" : "turbulence",
+			"speedmax" : 50,
+			"speedmin" : 50
+		},
+		{
+			"endtime" : 0.5,
+			"endvalue" : 1,
+			"id" : 10,
+			"name" : "sizechange",
+			"starttime" : 0,
+			"startvalue" : 0
+		}
+	],
+	"renderer" : 
+	[
+		{
+			"id" : 1,
+			"name" : "sprite"
+		}
+	],
+	"starttime" : 0
+}

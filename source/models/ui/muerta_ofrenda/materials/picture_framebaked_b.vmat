@@ -1,0 +1,19 @@
+"Layer0"
+{
+	"shader"	"global_lit_simple.vfx"
+	"F_TRANSLUCENT"	"1"
+	"g_flOpacityScale"	"1"
+	"g_vColorTint"	"[1.000000 1.000000 1.000000 0.000000]"
+	"g_vTexCoordOffset"	"[0.000000 0.000000 0.000000 0.000000]"
+	"g_vTexCoordScale"	"[1.000000 1.000000 0.000000 0.000000]"
+	"TextureTranslucency"	"[0.000000 0.000000 0.000000 0.000000]"
+	"TextureColor"	"models/ui/muerta_ofrenda/materials/picture_frame_color_baked_b.png"
+	"VRF Original Textures"
+	{
+		"g_tColor"	"models/ui/muerta_ofrenda/materials/picture_frame_color_baked_b_psd_ee4ef2f1.vtex"
+	}
+	"DynamicParams"
+	{
+		"g_flOpacityScale"	"return FadeOut;"
+	}
+}

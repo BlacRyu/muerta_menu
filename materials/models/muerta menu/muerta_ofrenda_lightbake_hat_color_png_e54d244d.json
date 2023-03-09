@@ -1,0 +1,13 @@
+{
+	"passes" : 
+	[
+		{
+			"combos" : 
+			{
+				"VERSION" : 2
+			},
+			"shader" : "generic2",
+			"textures" : [ "models/muerta menu/muerta_ofrenda_lightbake_hat_color_png_e54d244d" ]
+		}
+	]
+}
