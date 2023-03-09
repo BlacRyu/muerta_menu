@@ -2,10 +2,21 @@
 	"passes" : 
 	[
 		{
+			"alphawriting" : "default",
+			"blending" : "normal",
 			"combos" : 
 			{
 				"VERSION" : 2
 			},
+			"constantshadervalues" : 
+			{
+				"Light" : 1,
+				"Metal" : 0,
+				"Rough" : 0.95
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
 			"shader" : "generic2",
 			"textures" : 
 			[

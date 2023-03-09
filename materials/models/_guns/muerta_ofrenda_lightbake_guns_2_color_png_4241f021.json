@@ -10,9 +10,9 @@
 			},
 			"constantshadervalues" : 
 			{
-				"Light" : 0,
+				"Light" : 1,
 				"Metal" : 1,
-				"Rough" : 1
+				"Rough" : 0.95
 			},
 			"cullmode" : "normal",
 			"depthtest" : "enabled",
