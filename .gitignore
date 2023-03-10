@@ -1,2 +1,3 @@
 shaders/blobs*
 *.dxs
+scene.pkg

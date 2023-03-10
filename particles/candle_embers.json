@@ -81,7 +81,7 @@
 		}
 	],
 	"material" : "materials/particle/halo_2.json",
-	"maxcount" : 500,
+	"maxcount" : 50,
 	"operator" : 
 	[
 		{

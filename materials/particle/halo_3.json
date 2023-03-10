@@ -1,0 +1,14 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "additive",
+			"cullmode" : "nocull",
+			"depthtest" : "enabled",
+			"depthwrite" : "disabled",
+			"shader" : "genericparticle",
+			"textures" : [ "particle/fog/fog1" ]
+		}
+	]
+}

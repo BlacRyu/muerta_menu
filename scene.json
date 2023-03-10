@@ -8,13 +8,13 @@
 	"general" : 
 	{
 		"ambientcolor" : "0.75294 0.75294 0.75294",
-		"bloom" : false,
+		"bloom" : true,
 		"bloomhdrfeather" : 0.050000001,
-		"bloomhdriterations" : 4,
-		"bloomhdrscatter" : 1.49,
-		"bloomhdrstrength" : 1.0,
-		"bloomhdrthreshold" : 0.80000001,
-		"bloomstrength" : 2.0,
+		"bloomhdriterations" : 6,
+		"bloomhdrscatter" : 2.0,
+		"bloomhdrstrength" : 0.15000001,
+		"bloomhdrthreshold" : 1.0,
+		"bloomstrength" : 1.0,
 		"bloomthreshold" : 0.64999998,
 		"camerafade" : true,
 		"cameraparallax" : false,
@@ -30,7 +30,7 @@
 		"clearenabled" : true,
 		"farz" : 10000.0,
 		"fov" : 30.0,
-		"hdr" : false,
+		"hdr" : true,
 		"nearz" : 0.1,
 		"orthogonalprojection" : null,
 		"skylightcolor" : "0.75294 0.75294 0.75294",
@@ -261,7 +261,7 @@
 		{
 			"angles" : "0.00000 0.00000 0.00000",
 			"id" : 221,
-			"instanceoverride" : {},
+			"instanceoverride" : null,
 			"locktransforms" : true,
 			"name" : "candle_flame_1",
 			"origin" : "32.33800 6.16150 -126.55248",
@@ -664,6 +664,42 @@
 			{
 				"script" : "'use strict';\n\nshared.hoverCandle6 = false;\n\n/**\n * @param {CursorEvent} event\n */\nexport function cursorEnter(event) {\n\tshared.hoverCandle6 = true;\n}\n\n/**\n * @param {CursorEvent} event\n */\nexport function cursorLeave(event) {\n\tshared.hoverCandle6 = false;\n}\n",
 				"value" : false
+			}
+		},
+		{
+			"angles" : "0.00000 0.28749 0.00000",
+			"id" : 471,
+			"instanceoverride" : 
+			{
+				"alpha" : 0.25,
+				"id" : 472
+			},
+			"locktransforms" : true,
+			"name" : "Fog",
+			"origin" : "26.03938 5.93892 -127.15211",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/Fog.json",
+			"scale" : "0.05000 0.05000 0.05000",
+			"visible" : true
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 500,
+			"locktransforms" : false,
+			"maxtime" : 5.0,
+			"mintime" : 1.0,
+			"muteineditor" : true,
+			"name" : "muerta_ambeince_loop.ogg",
+			"origin" : "0.00000 0.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"playbackmode" : "loop",
+			"scale" : "1.00000 1.00000 1.00000",
+			"sound" : [ "sounds/muerta_ambeince_loop.ogg" ],
+			"startsilent" : false,
+			"volume" : 
+			{
+				"script" : "'use strict';\n\nvar userVolume;\nvar targetVolume;\nvar fadeInTime = 2.0;\nvar fadeOutTime = 0.5;\nvar muted = false;\nvar fadeInSpeed;\nvar fadeOutSpeed;\n\n/**\n * @param {Number} value - for property 'volume'\n * @return {Number} - update current property value\n */\nexport function init(value) {\n\ttargetVolume = userVolume = value;\n\tfadeInSpeed = targetVolume / fadeInTime;\n\tfadeOutSpeed = targetVolume / fadeOutTime;\n\treturn 0.0;\n}\n\nexport function update(value) {\n\t// fade in\n\tif (muted) {\n\t\ttargetVolume = 0.0;\n\t}\n\telse {\n\t\ttargetVolume = userVolume;\n\t}\n\n\tif (value < targetVolume) {\n\t\treturn value + fadeInSpeed * engine.frametime;\n\t}\n\telse if (value > targetVolume) {\n\t\treturn value - fadeOutSpeed * engine.frametime;\n\t}\n\telse {\n\t\treturn value;\n\t}\n}\n\n/**\n * @param {Object} changedUserProperties - only includes user properties that were recently changed!\n */\nexport function applyUserProperties(changedUserProperties) {\n\tif (changedUserProperties.ambientsounds !== undefined)\n\t\tmuted = !changedUserProperties.ambientsounds;\n}\n",
+				"value" : 0.5
 			}
 		},
 		{
