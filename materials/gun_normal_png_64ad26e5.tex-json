@@ -1,7 +1,7 @@
 {
 	"bleedtransparentcolors" : true,
 	"clampuvs" : true,
-	"format" : "rgba8888n",
+	"format" : "dxt5n",
 	"halfmip" : true,
 	"nonpoweroftwo" : true
 }
