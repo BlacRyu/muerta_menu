@@ -592,7 +592,7 @@
 			"color" : 
 			{
 				"script" : "'use strict';\n\nlet normalColor = new Vec3(1, .5, .1);\nlet ghostColor = new Vec3(.1, 1, .5);\n\n/**\n * @param {Vec3} value - for property 'color'\n * @return {Vec3} - update current property value\n */\nexport function update(value) {\n\tif (shared.hoverCandle6) {\n\t\treturn ghostColor;\n\t}\n\telse {\n\t\treturn normalColor;\n\t}\n}\n",
-				"value" : "1.00000 0.72941 0.07451"
+				"value" : "1.00000 0.44314 0.07451"
 			},
 			"id" : 68,
 			"intensity" : 

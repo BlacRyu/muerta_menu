@@ -23,7 +23,7 @@
 			"cullmode" : "normal",
 			"depthtest" : "enabled",
 			"depthwrite" : "enabled",
-			"shader" : "generic2",
+			"shader" : "generic2_fullbright",
 			"textures" : [ "models/_painting_hover/picture_frame_color_baked_b" ]
 		}
 	]
