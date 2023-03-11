@@ -7,7 +7,7 @@
 	},
 	"general" : 
 	{
-		"ambientcolor" : "0.75294 0.75294 0.75294",
+		"ambientcolor" : "0.51373 0.51373 0.51373",
 		"bloom" : true,
 		"bloomhdrfeather" : 0.050000001,
 		"bloomhdriterations" : 6,
@@ -59,7 +59,7 @@
 			"solid" : true,
 			"visible" : 
 			{
-				"script" : "'use strict';\n\nexport function init() {\n\tshared.normalColor = new Vec3(1, .5, .1);\n\tshared.ghostColor = new Vec3(.1, 1, .5);\n\n\tfor (let i = 1; i <= 6; ++i) {\n\t\tlet emitter = thisScene.getLayer(`candle_flame_${i}`);\n\t\temitter.instance.lifetime = 0.7 + Math.random() * 0.6;\n\t}\n}",
+				"script" : "'use strict';\n\nshared.Demo = false; // Activate demo mode for use when generating a thumbnail GIF\n\nexport function init() {\n\tshared.normalColor = new Vec3(1, .5, .1);\n\tshared.ghostColor = new Vec3(.1, 1, .5);\n\n\tfor (let i = 1; i <= 6; ++i) {\n\t\tlet emitter = thisScene.getLayer(`candle_flame_${i}`);\n\t\temitter.instance.lifetime = 0.7 + Math.random() * 0.6;\n\t}\n\n\tif (shared.Demo) {\n\t\tthisScene.getLayer(\"Fog\").stop();\n\t}\n}",
 				"value" : true
 			}
 		},
@@ -84,7 +84,7 @@
 			"solid" : true,
 			"visible" : 
 			{
-				"script" : "'use strict';\n\nvar initialPos;\nvar orbitPos;\nvar smoothness = 0.1;\nvar panAmount = new Vec2(-1.0, 0.5);\nvar rightVector;\nvar movementScale = 1.0;\n\nexport function init() {\n\tlet cameraTransforms = thisScene.getCameraTransforms();\n\tinitialPos = thisScene.getLayer(\"cameraEye\").origin;\n\torbitPos = thisScene.getLayer(\"cameraOrbit\").origin;\n\trightVector = initialPos.subtract(orbitPos).cross(cameraTransforms.up).normalize();\n\tthisScene.setCameraTransforms(cameraTransforms);\n}\n\nexport function update() {\n\tlet cameraTransforms = thisScene.getCameraTransforms();\n\t// Normalized cursor distance from center of screen\n\tlet screenPosition = input.cursorScreenPosition.divide(engine.screenResolution).subtract(0.5, 0.5);\n\t// Where the camera wants to go\n\tlet targetPos = initialPos.add(rightVector.multiply(panAmount.x * screenPosition.x * movementScale));\n\ttargetPos = targetPos.add(cameraTransforms.up.multiply(panAmount.y * screenPosition.y * movementScale));\n\t// Vector from current position to the target position\n\tlet toTarget = targetPos.subtract(cameraTransforms.eye);\n\tif (smoothness > 0.0001) {\n\t\tcameraTransforms.eye = cameraTransforms.eye.add(toTarget.multiply(1.0 - Math.pow(0.5, engine.frametime / smoothness)));\n\t}\n\telse {\n\t\tcameraTransforms.eye = targetPos;\n\t}\n\tcameraTransforms.center = orbitPos;\n\tthisScene.setCameraTransforms(cameraTransforms)\n}\n\n/**\n * @param {Object} changedUserProperties - only includes user properties that were recently changed!\n */\nexport function applyUserProperties(changedUserProperties) {\n\tif (changedUserProperties.cameramovementscale !== undefined) {\n\t\tmovementScale = changedUserProperties.cameramovementscale;\n\t}\n\tif (changedUserProperties.cameramovementsmoothness !== undefined) {\n\t\tsmoothness = changedUserProperties.cameramovementsmoothness;\n\t}\n}\n",
+				"script" : "'use strict';\n\nvar initialPos;\nvar orbitPos;\nvar smoothness = 0.1;\nvar panAmount = new Vec2(-1.0, 0.5);\nvar rightVector;\nvar movementScale = 1.0;\n\nexport function init() {\n\tlet cameraTransforms = thisScene.getCameraTransforms();\n\tinitialPos = thisScene.getLayer(\"cameraEye\").origin;\n\torbitPos = thisScene.getLayer(\"cameraOrbit\").origin;\n\trightVector = initialPos.subtract(orbitPos).cross(cameraTransforms.up).normalize();\n\tthisScene.setCameraTransforms(cameraTransforms);\n}\n\nexport function update() {\n\tlet cameraTransforms = thisScene.getCameraTransforms();\n\t// Normalized cursor distance from center of screen\n\tlet screenPosition = input.cursorScreenPosition.divide(engine.screenResolution).subtract(0.5, 0.5);\n\t// Where the camera wants to go\n\tlet targetPos = new Vec3(0.0);\n\tif (shared.Demo) {\n\t\ttargetPos = initialPos.add(rightVector.multiply(panAmount.x * (0.5 + Math.sin(engine.runtime * Math.PI / 2.4 )) * movementScale))\n\t}\n\telse {\n\t\ttargetPos = initialPos.add(rightVector.multiply(panAmount.x * screenPosition.x * movementScale));\n\t\ttargetPos = targetPos.add(cameraTransforms.up.multiply(panAmount.y * screenPosition.y * movementScale));\n\t}\n\t// Vector from current position to the target position\n\tlet toTarget = targetPos.subtract(cameraTransforms.eye);\n\tif (smoothness > 0.0001) {\n\t\tcameraTransforms.eye = cameraTransforms.eye.add(toTarget.multiply(1.0 - Math.pow(0.5, engine.frametime / smoothness)));\n\t}\n\telse {\n\t\tcameraTransforms.eye = targetPos;\n\t}\n\tcameraTransforms.center = orbitPos;\n\tthisScene.setCameraTransforms(cameraTransforms)\n}\n\n/**\n * @param {Object} changedUserProperties - only includes user properties that were recently changed!\n */\nexport function applyUserProperties(changedUserProperties) {\n\tif (changedUserProperties.cameramovementscale !== undefined) {\n\t\tmovementScale = changedUserProperties.cameramovementscale;\n\t}\n\tif (changedUserProperties.cameramovementsmoothness !== undefined) {\n\t\tsmoothness = changedUserProperties.cameramovementsmoothness;\n\t}\n}\n",
 				"value" : true
 			}
 		},
