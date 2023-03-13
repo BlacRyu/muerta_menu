@@ -41,6 +41,14 @@
 				"type" : "slider",
 				"value" : 0.2
 			},
+			"guneffects" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "Gun Effects",
+				"type" : "bool",
+				"value" : true
+			},
 			"schemecolor" : 
 			{
 				"order" : 0,

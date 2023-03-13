@@ -1,0 +1,121 @@
+{
+	"animationmode" : "randomframe",
+	"children" : 
+	[
+		{
+			"id" : 10,
+			"name" : "particles/Gun_Glow.json"
+		}
+	],
+	"controlpoint" : 
+	[
+		{
+			"flags" : 0,
+			"id" : 0,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 1,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 2,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 3,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 4,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 5,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 6,
+			"offset" : "0 0 0"
+		},
+		{
+			"flags" : 0,
+			"id" : 7,
+			"offset" : "0 0 0"
+		}
+	],
+	"emitter" : 
+	[
+		{
+			"directions" : "0 1 0.25",
+			"distancemax" : 100,
+			"distancemin" : 0,
+			"id" : 6,
+			"name" : "sphererandom",
+			"origin" : "0 50 0",
+			"rate" : 6
+		}
+	],
+	"initializer" : 
+	[
+		{
+			"id" : 2,
+			"max" : 1,
+			"min" : 0.80000001,
+			"name" : "lifetimerandom"
+		},
+		{
+			"id" : 3,
+			"max" : 450,
+			"min" : 250,
+			"name" : "sizerandom"
+		},
+		{
+			"id" : 4,
+			"max" : "10 100 0",
+			"min" : "-10 75 0",
+			"name" : "velocityrandom"
+		},
+		{
+			"id" : 5,
+			"max" : "35 156 128",
+			"min" : "0 208 105",
+			"name" : "colorrandom"
+		}
+	],
+	"material" : "materials/particle/ethereal_flame.json",
+	"maxcount" : 500,
+	"operator" : 
+	[
+		{
+			"id" : 7,
+			"name" : "movement"
+		},
+		{
+			"fadeintime" : 0.25,
+			"fadeouttime" : 0.75,
+			"id" : 8,
+			"name" : "alphafade"
+		},
+		{
+			"endvalue" : 1,
+			"id" : 9,
+			"name" : "sizechange",
+			"startvalue" : 0.5
+		}
+	],
+	"renderer" : 
+	[
+		{
+			"id" : 1,
+			"name" : "sprite"
+		}
+	],
+	"starttime" : 5
+}

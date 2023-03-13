@@ -739,6 +739,45 @@
 			"perspective" : false,
 			"solid" : true,
 			"visible" : false
+		},
+		{
+			"angles" : "0.85955 -0.00000 -0.39977",
+			"id" : 4308,
+			"instanceoverride" : 
+			{
+				"id" : 291
+			},
+			"locktransforms" : true,
+			"name" : "Dark_Flames",
+			"origin" : "22.77941 5.69672 -124.85512",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/Dark_Flames.json",
+			"scale" : "0.01000 0.01000 0.01000",
+			"visible" : 
+			{
+				"user" : "guneffects",
+				"value" : true
+			}
+		},
+		{
+			"angles" : "0.00000 -0.00000 0.89960",
+			"id" : 379,
+			"instanceoverride" : 
+			{
+				"alpha" : 1.1,
+				"id" : 297
+			},
+			"locktransforms" : true,
+			"name" : "Ethereal_Flames",
+			"origin" : "22.89806 5.45070 -124.89304",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/Ethereal_Flames.json",
+			"scale" : "0.01000 0.01000 0.01000",
+			"visible" : 
+			{
+				"user" : "guneffects",
+				"value" : true
+			}
 		}
 	],
 	"version" : 1

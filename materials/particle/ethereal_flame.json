@@ -1,0 +1,39 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "translucent",
+			"combos" : 
+			{
+				"BLENDMODE" : 2,
+				"S2BLEND" : 2,
+				"S3BLEND" : 2
+			},
+			"constantshadervalues" : 
+			{
+				"Sample 1 scale" : "0.5 0.35",
+				"Sample 1 speed" : "0.1 0.281",
+				"Sample 2 Blend amount" : 1,
+				"Sample 2 scale" : "0.1 0.1",
+				"Sample 2 speed" : "0.021 0.0157",
+				"Sample 3 Blend amount" : 0,
+				"Sample 3 scale" : "2 2",
+				"Sample 3 speed" : "0.2135 0.8557",
+				"Sharpness" : 9.74
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "disabled",
+			"shader" : "etherealparticle",
+			"textures" : 
+			[
+				"particle/clouds",
+				null,
+				null,
+				"particle/gradient_1",
+				"particle/gradient_2"
+			]
+		}
+	]
+}
