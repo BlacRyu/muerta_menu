@@ -43,11 +43,12 @@
 			},
 			"guneffects" : 
 			{
+				"condition" : "false",
 				"index" : 3,
 				"order" : 103,
 				"text" : "Gun Effects",
 				"type" : "bool",
-				"value" : true
+				"value" : false
 			},
 			"schemecolor" : 
 			{
@@ -64,7 +65,7 @@
 	"tags" : [ "Game" ],
 	"title" : "Dota 2 - Muerta Main Menu Ofrenda (3D)",
 	"type" : "scene",
-	"version" : 6,
+	"version" : 7,
 	"visibility" : "public",
 	"workshopid" : "2944545942",
 	"workshopurl" : "steam://url/CommunityFilePage/2944545942"

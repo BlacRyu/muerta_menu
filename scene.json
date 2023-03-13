@@ -756,7 +756,7 @@
 			"visible" : 
 			{
 				"user" : "guneffects",
-				"value" : true
+				"value" : false
 			}
 		},
 		{
@@ -776,7 +776,7 @@
 			"visible" : 
 			{
 				"user" : "guneffects",
-				"value" : true
+				"value" : false
 			}
 		}
 	],
