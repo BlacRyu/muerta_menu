@@ -63,8 +63,8 @@
 	"snapshotoverlay" : "",
 	"tags" : [ "Game" ],
 	"title" : "Dota 2 - Muerta Main Menu Ofrenda (3D)",
-	"type" : "Scene",
-	"version" : 5,
+	"type" : "scene",
+	"version" : 6,
 	"visibility" : "public",
 	"workshopid" : "2944545942",
 	"workshopurl" : "steam://url/CommunityFilePage/2944545942"

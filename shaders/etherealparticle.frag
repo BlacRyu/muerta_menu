@@ -1,6 +1,5 @@
 
 #include "common_fragment.h"
-#include "common_blending_custom.h"
 
 uniform sampler2D g_Texture0; // {"label":"ui_editor_properties_albedo","default":"util/white"}
 uniform sampler2D g_Texture3; // {"label":"Shape Mask 1","default":"util/white"}
@@ -61,7 +60,9 @@ void main() {
 	
 	// Sample 2
 	vec4 color2 = ConvertTexture0Format(texSample2D(g_Texture0, v_TexCoord.xy * u_Sample2Scale + g_Time * u_Sample2Speed + offsetCoords));
-	color.a = ApplyBlending(S2BLEND, color.a, color2.a, u_Sample2Blend).r * 2.0;
+	// Hard coding multiply blend since our custom ApplyBlending function is probably super slow
+	color.a = mix(color.a, color.a * color2.a, u_Sample2Blend).r * 2.0;
+	// color.a = ApplyBlending(S2BLEND, color.a, color2.a, u_Sample2Blend).r * 2.0;
 	
 	// Sample 3
 	// vec4 color3 = ConvertTexture0Format(texSample2D(g_Texture0, v_TexCoord.xy * u_Sample3Scale + g_Time * u_Sample3Speed + offsetCoords));
