@@ -1,0 +1,28 @@
+{
+	"passes" : 
+	[
+		{
+			"alphawriting" : "default",
+			"blending" : "normal",
+			"combos" : 
+			{
+				"FOG" : 1,
+				"LIGHTING" : 1,
+				"REFLECTION" : 0,
+				"RIMLIGHTING" : 0,
+				"SHADINGGRADIENT" : 0,
+				"TINTMASKALPHA" : 0
+			},
+			"constantshadervalues" : 
+			{
+				"Alpha" : 1,
+				"Color" : "1.00000 1.00000 1.00000"
+			},
+			"cullmode" : "normal",
+			"depthtest" : "enabled",
+			"depthwrite" : "enabled",
+			"shader" : "generic4",
+			"textures" : [ "models/_painting/muerta_ofrenda_lightbake_frame_color_png_ab465b53" ]
+		}
+	]
+}

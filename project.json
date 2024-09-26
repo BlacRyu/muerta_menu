@@ -60,6 +60,8 @@
 		}
 	},
 	"preview" : "preview.gif",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
 	"snapshotformat" : 1,
 	"snapshotoverlay" : "",
 	"tags" : [ "Game" ],

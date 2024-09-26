@@ -1,5 +1,4 @@
 To do:
-- Gun VFX
 
 
 
@@ -7,3 +6,4 @@ Done:
 - Vertex animation on flower petals
 - Candles change color on mouse over
 - Add some atmosphere somehow (fog, dust, rain, etc.)
+- Gun VFX

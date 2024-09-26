@@ -3,11 +3,11 @@
 	[
 		{
 			"id" : 12,
-			"name" : "particles/candle_embers.json"
+			"name" : "particles/candle_blue_aura.json"
 		},
 		{
 			"id" : 13,
-			"name" : "particles/candle_blue_aura.json"
+			"name" : "particles/candle_embers.json"
 		}
 	],
 	"controlpoint" : 
@@ -139,6 +139,7 @@
 	[
 		{
 			"id" : 1,
+			"length" : 2,
 			"maxlength" : 3,
 			"name" : "spritetrail"
 		}

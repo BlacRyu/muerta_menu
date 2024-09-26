@@ -8,9 +8,9 @@
 			{
 				"ui_editor_properties_overbright" : 1
 			},
-			"cullmode" : "normal",
-			"depthtest" : "enabled",
-			"depthwrite" : "disabled",
+			"cullmode" : "nocull",
+			"depthtest" : "disabled",
+			"depthwrite" : "enabled",
 			"shader" : "genericparticle",
 			"textures" : [ "particle/halo_6" ]
 		}
