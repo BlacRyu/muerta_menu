@@ -1,7 +1,7 @@
 {
 	"approved" : true,
 	"contentrating" : "Everyone",
-	"description" : "This is the main menu ofrenda scene from when Muerta was first released in Dota 2. It has been recreated for use in Wallpaper Engine. The candles and portrait change to be ethereal when the cursor hovers over them.\r\n\r\n\r\n\r\ntags: Dota 2 menu moba game muerta ofrenda altar shrine Mexico Mexican Día de los Muertos guns portrait candles flames fire 3D model",
+	"description" : "This is the main menu ofrenda scene from when Muerta was first released in Dota 2. It has been recreated for use in Wallpaper Engine. The candles and portrait change to be ethereal when the cursor hovers over them.\n\n\n\ntags: Dota 2 menu moba game muerta ofrenda altar shrine Mexico Mexican Día de los Muertos guns portrait candles flames fire 3D model OMGparticles",
 	"file" : "scene.json",
 	"general" : 
 	{
@@ -67,7 +67,7 @@
 	"tags" : [ "Game" ],
 	"title" : "Dota 2 - Muerta Main Menu Ofrenda (3D)",
 	"type" : "scene",
-	"version" : 7,
+	"version" : 8,
 	"visibility" : "public",
 	"workshopid" : "2944545942",
 	"workshopurl" : "steam://url/CommunityFilePage/2944545942"
